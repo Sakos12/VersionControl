@@ -121,7 +121,9 @@
     <value>Hozzáadás</value>
   </data>
   <data name="FullName" xml:space="preserve">
-    <value>
-TeljesNév</value>
+    <value>TeljesNév</value>
+  </data>
+  <data name="Write" xml:space="preserve">
+    <value>Fájlba írás</value>
   </data>
 </root>
