@@ -1,4 +1,4 @@
-﻿namespace negyedikgyak
+﻿namespace Negyedikfeladat
 {
     partial class Form1
     {

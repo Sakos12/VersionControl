@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29318.209
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "negyedikgyakorlat", "negyedikgyakorlat\negyedikgyakorlat.csproj", "{A74DAA34-3DBA-48F7-90BF-10852D9EBABF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negyedikfeladat", "Negyedikfeladat\Negyedikfeladat.csproj", "{6E379BB8-4FC8-4EE7-A4CB-DA286B206B5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A74DAA34-3DBA-48F7-90BF-10852D9EBABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A74DAA34-3DBA-48F7-90BF-10852D9EBABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A74DAA34-3DBA-48F7-90BF-10852D9EBABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A74DAA34-3DBA-48F7-90BF-10852D9EBABF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E379BB8-4FC8-4EE7-A4CB-DA286B206B5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E379BB8-4FC8-4EE7-A4CB-DA286B206B5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E379BB8-4FC8-4EE7-A4CB-DA286B206B5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E379BB8-4FC8-4EE7-A4CB-DA286B206B5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E587E2FD-06AD-4FE0-9055-32C53CC322B0}
+		SolutionGuid = {F16C93D1-64EA-473A-BFE3-6DB4338CE63F}
 	EndGlobalSection
 EndGlobal

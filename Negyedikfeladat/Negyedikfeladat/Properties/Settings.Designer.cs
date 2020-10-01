@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace negyedikgyak.Properties
+namespace Negyedikfeladat.Properties
 {
 
 
