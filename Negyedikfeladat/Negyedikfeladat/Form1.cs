@@ -76,6 +76,23 @@ namespace Negyedikfeladat
                 counter++;
             }
             xlSheet.get_Range(GetCell(2, 1), GetCell(1 + values.GetLength(0), values.GetLength(1))).Value2 = values;
+            int lastRowID = xlSheet.UsedRange.Rows.Count;
+            Excel.Range headerRange = xlSheet.get_Range(GetCell(1, 1), GetCell(1, headers.Length));
+            headerRange.Font.Bold = true;
+            headerRange.VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
+            headerRange.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+            headerRange.EntireColumn.AutoFit();
+            headerRange.RowHeight = 40;
+            headerRange.Interior.Color = Color.LightBlue;
+            headerRange.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThick);
+            Excel.Range tableRange = xlSheet.get_Range(GetCell(1, 1), GetCell(lastRowID, headers.Length));
+            tableRange.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThick);
+            Excel.Range firscolumn = xlSheet.get_Range(GetCell(1, 1), GetCell(lastRowID, 1));
+            firscolumn.Font.Bold = true;
+            firscolumn.Interior.Color = Color.Yellow;
+            Excel.Range lastcolumn = xlSheet.get_Range(GetCell(1, headers.Length), GetCell(lastRowID,headers.Length));
+            lastcolumn.Interior.Color = Color.LightGreen;
+
         }
         private string GetCell(int x,int y)
         {
@@ -91,5 +108,6 @@ namespace Negyedikfeladat
             ExcelCoordinate += x.ToString();
             return ExcelCoordinate;
         }
+        
     }
 }
