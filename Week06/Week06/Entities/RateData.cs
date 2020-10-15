@@ -9,7 +9,7 @@ namespace Week06.Entities
     class RateData
     {
        public DateTime Date { get; set; }
-        public string currency { get; set; }
+        public string Currency { get; set; }
         public decimal Value { get; set; }
     }
 }
