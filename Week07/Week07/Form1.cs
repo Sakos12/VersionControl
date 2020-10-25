@@ -24,7 +24,7 @@ namespace Week07
             Population = GetPopulation(@"C:\Temp\nép.csv");
             BirthProbabilities = GetBirthProbabilities(@"C:\Temp\születés.csv");
             DeathProbabilities = GetDeathProbabilities(@"C:\Temp\halál.csv");
-            for (int year = 2005; year <=2024; year++)
+            for (int year = 2005; year <= 2024; year++)
             {
                 for (int i = 0; i < Population.Count; i++)
                 {
@@ -42,9 +42,9 @@ namespace Week07
         public List<Person> GetPopulation(string csvpath)
         {
             List<Person> population = new List<Person>();
-            using (StreamReader sr = new StreamReader(csvpath,Encoding.Default))
+            using (StreamReader sr = new StreamReader(csvpath, Encoding.Default))
             {
-                while(!sr.EndOfStream)
+                while (!sr.EndOfStream)
                 {
                     var line = sr.ReadLine().Split(';');
                     population.Add(new Person()
@@ -69,7 +69,7 @@ namespace Week07
                     {
                         Age = int.Parse(line[0]),
                         NbrOfChildren = int.Parse(line[1]),
-                        BirthProb=double.Parse(line[2])
+                        BirthProb = double.Parse(line[2])
                     });
                 }
             }
@@ -103,5 +103,21 @@ namespace Week07
                              select x.DeathProb).FirstOrDefault();
             if (rng.NextDouble() <= pDeath)
                 person.IsAlive = false;
+            if (person.IsAlive && person.Gender == Gender.Female)
+            {
+                double pBirth = (from x in BirthProbabilities
+                                 where x.Age == age
+                                 select x.BirthProb).FirstOrDefault();
+                if (rng.NextDouble() <= pBirth)
+                {
+                    Person newborn = new Person();
+                    newborn.BirthYear = year;
+                    newborn.NbrOfChildren = 0;
+                    newborn.Gender = (Gender)(rng.Next(1, 3));
+                    Population.Add(newborn);
+                }
+            }
         }
+    }
 }
+
